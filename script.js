@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelector('.nav-links');
   if (toggle) toggle.addEventListener('click', () => links.classList.toggle('open'));
 
-  // Fade-in cards
   const cards = document.querySelectorAll('.card');
   const cardObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.1 });
   cards.forEach(c => cardObserver.observe(c));
 
-  // Scroll-spy nav highlight
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   const spyObserver = new IntersectionObserver((entries) => {
@@ -29,6 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { rootMargin: '-40% 0px -55% 0px' });
   sections.forEach(s => spyObserver.observe(s));
 
-  // Close mobile menu on link click
   navLinks.forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
 });

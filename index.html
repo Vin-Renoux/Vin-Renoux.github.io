@@ -24,6 +24,7 @@
     <section id="about">
       <div class="hero">
         <div class="hero-photo">
+          <!-- Your profile photo: keep this tag, just make sure assets/profile.jpg exists in your repo -->
           <img src="assets/profile.jpg" alt="Ali Sabah Hasan">
         </div>
         <div class="hero-text">
@@ -50,7 +51,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card prose">
         <h2 class="section-title">About Me</h2>
         <p>I'm a final-year software engineering student at UTS, drawn to work where technology actually helps the person using it rather than just working on paper.</p>
         <p>Alongside my degree I work in aviation ground services, assisting passengers through the airport and supporting flight crews. It's a job where you're solving problems in front of people, in real time, often under pressure and with someone who's stressed or in a hurry. I've learnt more about listening properly and staying calm from that than from anything else I've done, and I think it's shaped how I approach engineering just as much as any subject has.</p>
@@ -61,31 +62,58 @@
     </section>
 
     <!-- RESUME -->
+    <section id="resume">
       <div class="card">
         <h2 class="section-title">Resume</h2>
-        <h3>Education</h3>
-        <p class="meta">Bachelor of Software Engineering (Honours) &mdash; University of Technology Sydney | Feb 2023 - Dec 2026 (Expected)</p>
-        <ul class="bullets">
-          <li>High Distinction in Business Requirements Modelling</li>
-          <li>Distinction in Programming 1 (84)</li>
-          <li>Distinction in Data Structures and Algorithms</li>
-          <li>High Distinction in System Security (96)</li>
-          <li>Distinction in Software Development Studio</li>
-        </ul>
-        <p>Higher School Certificate, ATAR 88.4</p>
+        <p class="meta">Mobile: 0435405255 &nbsp;|&nbsp; Email: ali.4sh.hasan@gmail.com &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/ali-sabah-hasan" target="_blank" style="color:var(--accent);">LinkedIn</a></p>
+      </div>
+
+      <div class="card grid-2">
+        <div>
+          <h3>Career Objectives</h3>
+          <p>Penultimate-year Software Engineering student at UTS with hands-on experience leading a multidisciplinary engineering team, building full-stack applications, and working in fast-paced, customer-facing environments. Seeking a graduate engineering role where I can apply technical problem-solving, clear cross-disciplinary communication, and a proactive approach to new challenges.</p>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <p class="meta">Bachelor of Software Engineering (Honours) &mdash; UTS | Feb 2023 - Dec 2026 (Expected)</p>
+          <ul class="bullets">
+            <li>High Distinction in Business Requirements Modelling</li>
+            <li>Distinction in Programming 1 (84)</li>
+            <li>Distinction in Data Structures and Algorithms</li>
+            <li>High Distinction in System Security (96)</li>
+            <li>Distinction in Software Development Studio</li>
+          </ul>
+          <p class="meta">Higher School Certificate, ATAR 88.4</p>
+        </div>
       </div>
 
       <div class="card">
         <h3>Technical Skills</h3>
-        <ul class="bullets">
-          <li><strong>Languages:</strong> Java, Kotlin, Python, C/C++, C#, SQL</li>
-          <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
-          <li><strong>Development Tools:</strong> VS Code, Android Studio, XCode, Zed, Nvim, Arduino, Git/GitHub, VMWare/VirtualBox, WebGoat</li>
-          <li><strong>Networking Tools:</strong> Wireshark, PuTTY, Netwag</li>
-          <li><strong>Graphic Design:</strong> Adobe Creative Cloud (Photoshop)</li>
-          <li><strong>Operating Systems:</strong> Windows, Mac, Linux</li>
-          <li><strong>Other:</strong> Microsoft Office Suite (Word, PowerPoint, Excel)</li>
-        </ul>
+        <span class="chip-group-label">Languages</span>
+        <div class="chip-row">
+          <span class="chip">Java</span><span class="chip">Kotlin</span><span class="chip">Python</span>
+          <span class="chip">C/C++</span><span class="chip">C#</span><span class="chip">SQL</span>
+        </div>
+        <span class="chip-group-label">Web Development</span>
+        <div class="chip-row">
+          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+        </div>
+        <span class="chip-group-label">Development Tools</span>
+        <div class="chip-row">
+          <span class="chip">VS Code</span><span class="chip">Android Studio</span><span class="chip">XCode</span>
+          <span class="chip">Zed</span><span class="chip">Nvim</span><span class="chip">Arduino</span>
+          <span class="chip">Git/GitHub</span><span class="chip">VMWare/VirtualBox</span><span class="chip">WebGoat</span>
+        </div>
+        <span class="chip-group-label">Networking Tools</span>
+        <div class="chip-row">
+          <span class="chip">Wireshark</span><span class="chip">PuTTY</span><span class="chip">Netwag</span>
+        </div>
+        <span class="chip-group-label">Other</span>
+        <div class="chip-row">
+          <span class="chip">Adobe Photoshop</span><span class="chip">Windows</span><span class="chip">Mac</span>
+          <span class="chip">Linux</span><span class="chip">Microsoft Office Suite</span>
+        </div>
       </div>
 
       <div class="card">
@@ -111,25 +139,27 @@
         </ul>
       </div>
 
-      <div class="card">
-        <h3>ScamShark (Anti-Scam SMS App)</h3>
-        <p class="meta">University of Technology Sydney | 02/2025 - 06/2025</p>
-        <ul class="bullets">
-          <li>Designed and developed an Android application named ScamShark to warn users of scam SMS messages, focusing on user safety and digital literacy.</li>
-          <li>Collaborated within a cross-functional team using SCRUM methodology, Jira for task management, and regular feedback loops with clients.</li>
-          <li>Employed version control tools (GitHub), Android Studio, and VS Code; utilised Kotlin, Java, and XML for full-stack mobile development.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>FixMate - Tradie Quoting Automation App</h3>
-        <p class="meta">University of Technology Sydney | 08/2025 - 11/2025</p>
-        <ul class="bullets">
-          <li>Developed backend infrastructure for a tradie quoting application designed to streamline manual inspection workflows and automate pricing through supplier data integration.</li>
-          <li>Built RESTful API endpoints using Node.js and Express.js to handle image uploads, linking each photo to a job record in a Supabase PostgreSQL database.</li>
-          <li>Integrated Supabase Storage Buckets for scalable cloud-based image management.</li>
-          <li>Implemented secure environment variable management and modular MVC architecture.</li>
-        </ul>
+      <h3 style="margin: 0.5rem 0 1rem 0;">Projects</h3>
+      <div class="grid-2">
+        <div class="card">
+          <h3>ScamShark (Anti-Scam SMS App)</h3>
+          <p class="meta">University of Technology Sydney | 02/2025 - 06/2025</p>
+          <ul class="bullets">
+            <li>Designed and developed an Android application named ScamShark to warn users of scam SMS messages, focusing on user safety and digital literacy.</li>
+            <li>Collaborated within a cross-functional team using SCRUM methodology, Jira for task management, and regular feedback loops with clients.</li>
+            <li>Employed version control tools (GitHub), Android Studio, and VS Code; utilised Kotlin, Java, and XML for full-stack mobile development.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>FixMate &mdash; Tradie Quoting Automation App</h3>
+          <p class="meta">University of Technology Sydney | 08/2025 - 11/2025</p>
+          <ul class="bullets">
+            <li>Developed backend infrastructure for a tradie quoting application designed to streamline manual inspection workflows and automate pricing through supplier data integration.</li>
+            <li>Built RESTful API endpoints using Node.js and Express.js to handle image uploads, linking each photo to a job record in a Supabase PostgreSQL database.</li>
+            <li>Integrated Supabase Storage Buckets for scalable cloud-based image management.</li>
+            <li>Implemented secure environment variable management and modular MVC architecture.</li>
+          </ul>
+        </div>
       </div>
 
       <div class="card">
@@ -140,13 +170,13 @@
           <li><strong>Communication Skills:</strong> Clear, concise, and persuasive messages tailored to the audience.</li>
           <li><strong>Problem Solving:</strong> Fast identification of issues and effective solutions under time pressure.</li>
         </ul>
-        <p>Referees provided upon request.</p>
+        <p class="meta">Referees provided upon request.</p>
       </div>
     </section>
 
     <!-- REFLECTION -->
     <section id="reflection">
-      <div class="card">
+      <div class="card prose">
         <h2 class="section-title">Reflection</h2>
         <p class="subtitle">Optik Consultancy Internship (Tech Lead, Student Consultant)</p>
 
@@ -157,13 +187,15 @@
         <p>The opposite. It became one of the most valuable experiences of my degree. Our client's problem was that for every hour a site inspector spent inspecting, they spent roughly five hours afterwards writing up the report. We built a hands-free field-inspection app around that ratio, pairing Meta smart glasses with a custom Android app driven by a voice-controlled AI talk-back system, so an inspector could say "take a photo" and the app would trigger the glasses' camera over Bluetooth, then store the photo compressed but fully detailed, ready to annotate and caption on the spot.</p>
 
         <div class="image-placeholder">
-          <img src="assets/internship-photo-1.jpg" alt="Screenshots of app">
+          <!-- Tradeshow / prototype photo. Swap the src if you want a different shot. -->
+          <img src="assets/internship-photo-1.png" alt="Rockfield internship tradeshow display">
         </div>
 
         <p>I took on the tech lead role, and while I expected the build to fall mainly to the two of us from a software background, the team spanned five engineering disciplines, and everyone took ownership of their own part. We built two ways for inspectors to report: a guided checklist mode where the AI asks structured questions back and forth, and a freeform mode where an on-device Qwen 1.5B model parses a single spoken description straight into the report fields. The feature clients cared about most was the loadsheet system, letting a contractor like a state government or mining company upload their own inspection template as a Word, CSV, or Excel file, and export a finished report in any of those formats plus ZIP or PDF, with the option to pick up and continue an inspection later.</p>
 
         <div class="image-placeholder">
-            <img src="assets/internship-photo-2.jpg" alt="Internship tradeshow photo">
+          <!-- App screenshots / exported report photo -->
+          <img src="assets/internship-photo-2.jpg" alt="App screenshots and exported inspection report">
         </div>
 
         <p>Most of the time went on getting the glasses-to-app connection to behave reliably once we moved from indoor demos to outdoor field tests, designing for someone whose hands are occupied and who cannot look at a screen, and keeping the voice pipeline accurate without dropouts in the field. Assumptions that held indoors sometimes failed on site, which meant iterating on the integration more than once. I was fortunate with my client and group, but speaking to other teams, I do not think the value came down to luck. Every group came away with something.</p>
@@ -182,7 +214,7 @@
 
     <!-- COVER LETTER -->
     <section id="cover-letter">
-      <div class="card">
+      <div class="card prose">
         <h2 class="section-title">Cover Letter</h2>
         <p class="meta">0435405255 | ali.4sh.hasan@gmail.com | 25 August 2026 | Industrus Engineering</p>
         <p><em>Re: Application for Graduate Engineering Program - Software Engineering</em></p>
