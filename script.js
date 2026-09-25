@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const cards = document.querySelectorAll('.card');
   const cardObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = (i % 4) * 0.06 + 's';
         entry.target.classList.add('visible');
         cardObserver.unobserve(entry.target);
       }
