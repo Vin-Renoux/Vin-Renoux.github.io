@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Ali Sabah Hasan | ePortfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
-      <div class="nav-title">Ali Sabah Hasan</div>
+      <div class="nav-title">AS</div>
       <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -22,6 +23,11 @@
 
     <!-- ABOUT -->
     <section id="about">
+      <div class="hero-banner">
+        <!-- Optional: replace this gradient with a real photo by adding
+             background-image: url('assets/hero-bg.jpg'); background-size: cover; background-position: center;
+             to .hero-banner in style.css -->
+      </div>
       <div class="hero">
         <div class="hero-photo">
           <img src="assets/profile.jpg" alt="Ali Sabah Hasan">
@@ -51,7 +57,7 @@
         </div>
       </div>
 
-      <div class="card prose">
+      <div class="card prose" style="margin-top: 2rem;">
         <h2 class="section-title">About Me</h2>
         <p>I'm a final-year software engineering student at UTS, drawn to work where technology actually helps the person using it rather than just working on paper.</p>
         <p>Alongside my degree I work in aviation ground services, assisting passengers through the airport and supporting flight crews. It's a job where you're solving problems in front of people, in real time, often under pressure and with someone who's stressed or in a hurry. I've learnt more about listening properly and staying calm from that than from anything else I've done, and I think it's shaped how I approach engineering just as much as any subject has.</p>
@@ -65,39 +71,44 @@
     <section id="resume">
       <div class="card">
         <h2 class="section-title">Resume</h2>
-          <h3>Education</h3>
-          <p class="meta">Bachelor of Software Engineering (Honours) &mdash; UTS | Feb 2023 - Dec 2026 (Expected)</p>
-          <ul class="bullets">
-            <li>High Distinction in Business Requirements Modelling</li>
-            <li>Distinction in Programming 1 (84)</li>
-            <li>Distinction in Data Structures and Algorithms</li>
-            <li>High Distinction in System Security (96)</li>
-            <li>Distinction in Software Development Studio</li>
-          </ul>
-          <p class="meta">Higher School Certificate, ATAR 88.4</p>
-        <div>
-          <h3>Technical Skills</h3>
-          <span class="chip-group-label">Languages</span>
-          <div class="chip-row">
-            <span class="chip">Java</span><span class="chip">Kotlin</span><span class="chip">Python</span>
-            <span class="chip">C/C++</span><span class="chip">C#</span><span class="chip">SQL</span>
-          </div>
-          <span class="chip-group-label">Web &amp; Tools</span>
-          <div class="chip-row">
-            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
-            <span class="chip">Git/GitHub</span><span class="chip">Android Studio</span>
-          </div>
-          <span class="chip-group-label">Other</span>
-          <div class="chip-row">
-            <span class="chip">Wireshark</span><span class="chip">PuTTY</span><span class="chip">Netwag</span>
-            <span class="chip">Photoshop</span><span class="chip">Linux</span>
-          </div>
+
+        <h3><svg class="section-icon" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 10.5L4.5 9.5 12 5.5l7.5 4-7.5 4zM5 13.18v3.64c0 1.5 3.13 3.18 7 3.18s7-1.68 7-3.18v-3.64l-7 3.82-7-3.82z"/></svg> Education</h3>
+        <p class="meta">Bachelor of Software Engineering (Honours) &mdash; UTS | Feb 2023 - Dec 2026 (Expected)</p>
+        <ul class="bullets">
+          <li>High Distinction in Business Requirements Modelling</li>
+          <li>Distinction in Programming 1 (84)</li>
+          <li>Distinction in Data Structures and Algorithms</li>
+          <li>High Distinction in System Security (96)</li>
+          <li>Distinction in Software Development Studio</li>
+        </ul>
+        <p class="meta">Higher School Certificate, ATAR 88.4</p>
+
+        <h3><svg class="section-icon" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3l4.1 4.1L7.1 7.5 3 3.4C1.9 5.8 2.3 8.8 4.3 10.8c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l1-1c.4-.4.4-1 0-1.4z"/></svg> Technical Skills</h3>
+        <span class="chip-group-label">Languages</span>
+        <div class="chip-row">
+          <span class="chip">Java</span><span class="chip">Kotlin</span><span class="chip">Python</span>
+          <span class="chip">C/C++</span><span class="chip">C#</span><span class="chip">SQL</span>
+        </div>
+        <span class="chip-group-label">Web &amp; Tools</span>
+        <div class="chip-row">
+          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+          <span class="chip">Git/GitHub</span><span class="chip">Android Studio</span>
+        </div>
+        <span class="chip-group-label">Other</span>
+        <div class="chip-row">
+          <span class="chip">Wireshark</span><span class="chip">PuTTY</span><span class="chip">Netwag</span>
+          <span class="chip">Photoshop</span><span class="chip">Linux</span>
         </div>
       </div>
 
+      <div class="group-heading"><svg viewBox="0 0 24 24"><path d="M10 2a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v3h20V8a2 2 0 0 0-2-2h-4V4a2 2 0 0 0-2-2h-4zm0 2h4v2h-4V4zM2 13v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6H2z"/></svg> Professional Experience</div>
+
       <div class="card">
-        <h3>Software Engineer Tech Lead (Student Consultant)</h3>
-        <p class="meta">Optik Consultancy, Client: Rockfield Technologies | May 2026 - Aug 2026</p>
+        <div class="job-header">
+          <h3 class="job-title" style="margin-top:0;">Software Engineer Tech Lead (Student Consultant)</h3>
+          <span class="job-date">May 2026 - Aug 2026</span>
+        </div>
+        <p class="job-company">Optik Consultancy, Client: Rockfield Technologies</p>
         <ul class="bullets">
           <li>Led the technical side of a multidisciplinary team of five engineering disciplines, building a hands-free field-inspection app that cut the typical ratio of one hour of site inspection to five hours of manual reporting.</li>
           <li>Built a voice-controlled AI talk-back system that triggers the Meta smart glasses' camera over Bluetooth, capturing, compressing, and storing annotated photos while the inspector's hands stay free.</li>
@@ -110,11 +121,12 @@
 
       <div class="card grid-2">
         <div>
-          <h3>Passenger Services Agent</h3>
-          <p class="meta">
-            <span class="status-dot"></span><span class="status-text">Currently working here</span>
-          </p>
-          <p class="meta">Tailored Workforce | 09/2024 - Current</p>
+          <div class="job-header">
+            <h3 class="job-title" style="margin-top:0;">Passenger Services Agent</h3>
+            <span class="job-date">09/2024 - Current</span>
+          </div>
+          <p class="job-company">Tailored Workforce</p>
+          <p class="meta"><span class="status-dot"></span><span class="status-text">Currently working here</span></p>
           <ul class="bullets">
             <li>Delivered high-quality customer service to passengers with diverse needs, including wheelchair assistance, baggage handling, and security processes.</li>
             <li>Ensured strict compliance with airport rules, aviation standards, and government regulations in a safety-critical environment.</li>
@@ -122,7 +134,7 @@
           </ul>
         </div>
         <div>
-          <h3>Relevant Skills</h3>
+          <h3 style="margin-top:0;">Relevant Skills</h3>
           <ul class="bullets">
             <li><strong>Customer Service:</strong> Effectively addressing client needs and resolving issues promptly.</li>
             <li><strong>Bilingual Communication:</strong> Fluent in both Arabic and English.</li>
@@ -133,11 +145,14 @@
         </div>
       </div>
 
-      <h3 style="margin: 0.5rem 0 1rem 0;">Projects</h3>
+      <div class="group-heading"><svg class="section-icon" viewBox="0 0 24 24"><path d="M10 4H2v16h20V6H12l-2-2z"/></svg> Projects</div>
       <div class="grid-2">
         <div class="card">
-          <h3>ScamShark (Anti-Scam SMS App)</h3>
-          <p class="meta">University of Technology Sydney | 02/2025 - 06/2025</p>
+          <div class="job-header">
+            <h3 class="job-title project-title-scamshark" style="margin-top:0;">Scam<span>Shark</span></h3>
+            <span class="job-date">02/2025 - 06/2025</span>
+          </div>
+          <p class="job-company" style="color: var(--scamshark-blue);">Anti-Scam SMS App &mdash; UTS</p>
           <ul class="bullets">
             <li>Designed and developed an Android application named ScamShark to warn users of scam SMS messages, focusing on user safety and digital literacy.</li>
             <li>Collaborated within a cross-functional team using SCRUM methodology, Jira for task management, and regular feedback loops with clients.</li>
@@ -145,8 +160,11 @@
           </ul>
         </div>
         <div class="card">
-          <h3>FixMate &mdash; Tradie Quoting Automation App</h3>
-          <p class="meta">University of Technology Sydney | 08/2025 - 11/2025</p>
+          <div class="job-header">
+            <h3 class="job-title project-title-fixmate" style="margin-top:0;"><span class="fix">Fix</span><span class="mate">Mate</span></h3>
+            <span class="job-date">08/2025 - 11/2025</span>
+          </div>
+          <p class="job-company" style="color: var(--fixmate-orange);">Tradie Quoting Automation App &mdash; UTS</p>
           <ul class="bullets">
             <li>Developed backend infrastructure for a tradie quoting application designed to streamline manual inspection workflows and automate pricing through supplier data integration.</li>
             <li>Built RESTful API endpoints using Node.js and Express.js to handle image uploads, linking each photo to a job record in a Supabase PostgreSQL database.</li>
@@ -163,7 +181,7 @@
         <h2 class="section-title">Reflection</h2>
         <p class="subtitle">Optik Consultancy Internship (Tech Lead, Student Consultant)</p>
 
-        <h3>What were your expectations before you joined?</h3>
+        <h3 style="margin-top:0;">What were your expectations before you joined?</h3>
         <p>Honestly, I expected it to be a drag. Friends who had done the last round described it as something to get through for the sake of having one on your record, and said the value came down to luck: whether you got a good client and a good group. I planned to complete it, do it well, and move on.</p>
 
         <h3>What was the reality?</h3>
@@ -202,7 +220,7 @@
         <p>Dear Hiring Manager,</p>
         <p>I am writing to apply for a graduate engineering position in the Industrus Engineering Graduate Program. As a penultimate-year Software Engineering student at UTS, I have led a multidisciplinary team on a client-facing prototype, built full-stack applications from concept to delivery, and worked in fast-paced, people-facing environments. I believe this combination has prepared me to contribute across your rotating project roles and divisions. Below I address the selection criteria.</p>
 
-        <h3>A commitment to ethical conduct and accountability</h3>
+        <h3 style="margin-top:1.3rem;">A commitment to ethical conduct and accountability</h3>
         <p>During my internship at Optik Consultancy, our team was building a hands-free field-inspection app for a client using Meta smart glasses and a custom Android app. Several assumptions that had held up in indoor testing failed once we tested outdoors. Rather than smoothing over these gaps in our reporting, I made sure the technical handover documentation to the client accurately reflected what worked, what didn't, and why. This meant flagging shortcomings that could have made our results look less polished. The client appreciated the honesty and used the documentation to plan the next phase of the project with realistic expectations, reinforcing to me that accurate reporting matters more than a good-looking result.</p>
 
         <h3>Ability to effectively communicate with engineers and stakeholders from different fields</h3>
