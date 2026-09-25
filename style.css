@@ -18,6 +18,7 @@
   --scamshark-pale: #cfe4fa;
   --fixmate-orange: #f2811d;
 }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -66,27 +67,36 @@ body {
 
 section { padding-top: 2.2rem; }
 
-/* HERO BANNER */
-.hero-banner {
+/* ---------------------------------------------------------------
+   ABOUT SECTION: full-bleed background scoped to #about only.
+   It automatically reverts to the page's dark background the
+   instant #resume starts, since the image lives only inside
+   #about::before.
+--------------------------------------------------------------- */
+#about {
   position: relative;
-  height: 260px;
-  margin: 2rem 0 0;
-  border-radius: var(--radius);
+  padding-bottom: 2.5rem;
   overflow: hidden;
-  background:
-    linear-gradient(180deg, rgba(35,34,39,0) 0%, var(--bg) 95%),
-    linear-gradient(120deg, #2b2f52 0%, #4a4183 35%, #8a6fae 60%, #d98e73 85%, #f2b880 100%);
 }
-.hero-banner::after {
+#about::before {
   content: '';
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 70% 40% at 50% 100%, rgba(35,34,39,0.9), transparent),
-    repeating-linear-gradient(180deg, transparent 0 6px, rgba(0,0,0,0.03) 6px 7px);
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+     background:
+       linear-gradient(180deg, rgba(15,15,20,0.55) 0%, rgba(15,15,20,0.72) 55%, var(--bg) 100%),
+       url('assets/wallpaper.jpg');
+     background-size: cover;
+     background-position: center; */
 }
+#about .container { padding-top: 3rem; }
+
 .hero {
   display: flex; align-items: flex-end; gap: 2.2rem; flex-wrap: wrap;
-  margin-top: -70px; padding: 0 0.5rem 1rem; position: relative; z-index: 2;
+  padding: 0 0.5rem 2rem;
 }
 .hero-photo {
   width: 150px; height: 150px; border-radius: 50%;
@@ -95,24 +105,42 @@ section { padding-top: 2.2rem; }
   color: var(--muted); font-size: 0.8rem; text-align: center;
   overflow: hidden; flex-shrink: 0;
   border: 4px solid var(--bg);
-  box-shadow: 0 0 0 3px rgba(146,155,255,0.35), 0 8px 30px rgba(0,0,0,0.35);
+  box-shadow: 0 0 0 3px rgba(146,155,255,0.35), 0 8px 30px rgba(0,0,0,0.45);
   transition: box-shadow 0.3s ease;
 }
-.hero-photo:hover { box-shadow: 0 0 0 4px rgba(146,155,255,0.55), 0 8px 30px rgba(0,0,0,0.4); }
+.hero-photo:hover { box-shadow: 0 0 0 4px rgba(146,155,255,0.55), 0 8px 30px rgba(0,0,0,0.5); }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .hero-text { padding-bottom: 0.3rem; }
-.hero-text h1 { margin-bottom: 0.2rem; font-size: 2.2rem; color: var(--heading); }
-.subtitle { color: var(--muted); margin-top: 0; margin-bottom: 1rem; }
+
+/* Name: solid white, forced, with a shadow so it stays legible over any background photo */
+.hero-name {
+  margin: 0 0 0.2rem;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: none !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7), 0 4px 18px rgba(0,0,0,0.5);
+}
+.subtitle {
+  color: #e7e7ee; margin-top: 0; margin-bottom: 0.8rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+.hero-meta {
+  color: #d7d7e2 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+.meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.6rem 0; }
 
 .social-icons { display: flex; gap: 0.9rem; margin-top: 0.8rem; }
 .social-icons a {
   width: 42px; height: 42px; border-radius: 50%;
-  background: var(--card-alt);
+  background: rgba(255,255,255,0.14);
   display: flex; align-items: center; justify-content: center;
-  color: var(--muted);
+  color: #fff;
   transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
-.social-icons a:hover { background: rgba(146,155,255,0.2); color: var(--accent); transform: translateY(-3px) scale(1.05); }
+.social-icons a:hover { background: rgba(255,255,255,0.28); transform: translateY(-3px) scale(1.05); }
 .social-icons svg { width: 20px; height: 20px; fill: currentColor; }
 
 h2.section-title {
@@ -134,11 +162,10 @@ h2.section-title::before {
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--glass-border);
 }
-.group-heading svg { width: 18px; height: 18px; fill: var(--accent2); }
+.group-heading svg { width: 18px; height: 18px; fill: var(--accent2); flex-shrink: 0; }
 
 h3 { font-size: 1.08rem; margin-bottom: 0.2rem; color: var(--heading); margin-top: 1.3rem; }
 h3:first-child { margin-top: 0; }
-.meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.6rem 0; }
 ul.bullets { margin-top: 0.4rem; padding-left: 1.1rem; }
 ul.bullets li { margin-bottom: 0.4rem; font-size: 0.95rem; color: var(--text); }
 p { color: var(--text); }
@@ -163,7 +190,6 @@ p { color: var(--text); }
 .grid-2 > div { margin: 0; }
 .grid-2 h3, .grid-3 h3 { margin-top: 0; }
 
-/* JOB ENTRY LAYOUT (Khaled-style) */
 .job-header {
   display: flex; justify-content: space-between; align-items: baseline;
   flex-wrap: wrap; gap: 0.4rem;
@@ -171,6 +197,12 @@ p { color: var(--text); }
 .job-title { font-size: 1.15rem; font-weight: 700; color: var(--heading); margin: 0; }
 .job-date { font-size: 0.85rem; color: var(--muted); font-style: italic; white-space: nowrap; }
 .job-company { font-size: 0.95rem; color: var(--accent); font-weight: 600; margin: 0.15rem 0 0.7rem; }
+
+.letter-head { margin-bottom: 1.6rem; }
+.letter-name { font-size: 1.2rem; margin: 0 0 0.2rem; color: var(--heading); }
+.letter-divider { border: none; border-top: 1px solid var(--glass-border); margin: 1rem 0; }
+.letter-date { font-style: italic; color: var(--muted); margin: 0 0 0.8rem; }
+.letter-recipient { color: var(--accent); font-weight: 600; margin: 0; line-height: 1.5; }
 
 .chip-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.6rem; }
 .chip {
@@ -203,17 +235,26 @@ p { color: var(--text); }
 .project-title-fixmate .fix { color: var(--fixmate-orange); }
 .project-title-fixmate .mate { color: var(--heading); }
 
+/* IMAGE PLACEHOLDER: capped width + moderate 3:2 ratio so photos fill the box without
+   heavy top/bottom cropping OR empty side gutters. Adjust the ratio below to taste. */
 .image-placeholder {
-  width: 100%; height: 340px;
+  max-width: 700px;
+  aspect-ratio: 3 / 2;
+  margin: 1.3rem auto;
   background: linear-gradient(135deg, rgba(146,155,255,0.12), rgba(168,163,255,0.10));
   border-radius: 18px;
   display: flex; align-items: center; justify-content: center;
   color: var(--muted); font-size: 0.9rem; text-align: center;
-  margin: 1.3rem 0; padding: 1rem;
+  padding: 0;
   overflow: hidden;
   border: 1px solid var(--glass-border);
 }
-.image-placeholder img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; display: block; }
+.image-placeholder img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 
 a.button {
   display: inline-block;
@@ -240,11 +281,11 @@ footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 2
   }
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; }
-  .hero { flex-direction: column; align-items: center; text-align: center; margin-top: -50px; }
+  .hero { flex-direction: column; align-items: center; text-align: center; }
   .hero-photo { width: 120px; height: 120px; }
   .social-icons { justify-content: center; }
   .card { padding: 1.5rem; }
   .container { padding: 0 1.2rem 2rem; }
-  .image-placeholder { height: 220px; }
+  .image-placeholder { max-width: 100%; }
   .job-header { flex-direction: column; }
 }

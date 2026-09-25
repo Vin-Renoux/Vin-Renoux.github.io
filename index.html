@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Ali Sabah Hasan | ePortfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
-      <div class="nav-title">AS</div>
+      <div class="nav-title">ASH</div>
       <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -19,23 +18,20 @@
     </nav>
 
 
-  <div class="container">
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="hero-banner">
-        <!-- Optional: replace this gradient with a real photo by adding
-             background-image: url('assets/hero-bg.jpg'); background-size: cover; background-position: center;
-             to .hero-banner in style.css -->
-      </div>
+  <!-- ABOUT: this whole section has a full-bleed background (see #about::before in style.css). -->
+  <!-- TO SET YOUR WALLPAPER: save it to assets/wallpaper.jpg, then uncomment the background-image -->
+  <!-- line inside "#about::before" in style.css. It automatically reverts to the dark page colour -->
+  <!-- the moment the Resume section starts, since the background is scoped to #about only. -->
+  <section id="about">
+    <div class="container">
       <div class="hero">
         <div class="hero-photo">
           <img src="assets/profile.jpg" alt="Ali Sabah Hasan">
         </div>
         <div class="hero-text">
-          <h1>Ali Sabah Hasan</h1>
+          <h1 class="hero-name" style="color:#ffffff;">Ali Sabah Hasan</h1>
           <p class="subtitle">Bachelor of Software Engineering (Honours), University of Technology Sydney</p>
-          <p class="meta">0435405255 &nbsp;|&nbsp; ali.4sh.hasan@gmail.com</p>
+          <p class="meta hero-meta">0435405255 &nbsp;|&nbsp; ali.4sh.hasan@gmail.com</p>
           <div class="social-icons">
             <a href="https://github.com/Vin-Renoux" target="_blank" aria-label="GitHub"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01
@@ -57,55 +53,64 @@
         </div>
       </div>
 
-      <div class="card prose" style="margin-top: 2rem;">
+      <div class="card">
         <h2 class="section-title">About Me</h2>
-        <p>I'm a final-year software engineering student at UTS, drawn to work where technology actually helps the person using it rather than just working on paper.</p>
-        <p>Alongside my degree I work in aviation ground services, assisting passengers through the airport and supporting flight crews. It's a job where you're solving problems in front of people, in real time, often under pressure and with someone who's stressed or in a hurry. I've learnt more about listening properly and staying calm from that than from anything else I've done, and I think it's shaped how I approach engineering just as much as any subject has.</p>
-        <p>Most recently I completed a twelve-week engineering internship at Optik Consultancy, where I was tech lead on a hands-free field-inspection app for a client in asset inspection. Our team's driving problem statement was simple: for every hour of site inspection, inspectors were spending five hours writing it up afterwards. We paired Meta smart glasses with a custom Android app so inspectors could report hands-free while still on site, using voice commands to trigger the glasses' camera and capture, annotate, and file photos in real time. Leading the technical side of a team from five different engineering disciplines was the most valuable experience of my degree so far. We finished the original project scope six weeks ahead of schedule, and I led the team through additional stretch goals that resulted in a workflow the client was proud to showcase at a tradeshow.</p>
-        <p>I'm bilingual in Arabic and English, and I've found that being able to adjust how you explain something matters as much in a technical meeting as it does at an airport gate.</p>
+        <p>I'm a final-year software engineering student at UTS, drawn to work where technology actually helps the person using it rather than just working on paper. Across my degree, the projects and roles I've enjoyed most are the ones where I can see exactly who benefits from what I build, whether that's an inspector, a tradie, or someone at an airport gate.</p>
+        <p>Alongside my degree I work in aviation ground services, assisting passengers through the airport and supporting flight crews. It's a job where you're solving problems in front of people, in real time, often under pressure and with someone who's stressed or in a hurry. I've learnt more about listening properly and staying calm from that than from anything else I've done, and I think it's shaped how I approach engineering just as much as any subject has, especially when it comes to explaining a technical decision to someone who just wants to know if the thing will work.</p>
+        <p>Most recently I completed a twelve-week engineering internship at Optik Consultancy, where I was tech lead on a hands-free field-inspection app for a client in asset inspection. Our team's driving problem statement was simple: for every hour of site inspection, inspectors were spending five hours writing it up afterwards. We paired Meta smart glasses with a custom Android app so inspectors could report hands-free while still on site, using voice commands to trigger the glasses' camera and capture, annotate, and file photos in real time. Leading the technical side of a team from five different engineering disciplines was the most valuable experience of my degree so far, and it's where I first got a real sense of what it means to own a system end to end rather than just a feature.</p>
+        <p>We finished the original project scope six weeks ahead of schedule, and I led the team through additional stretch goals that resulted in a workflow the client was proud to showcase at a tradeshow. That stretch phase taught me more about scoping and momentum than any single sprint before it did.</p>
+        <p>I'm bilingual in Arabic and English, and I've found that being able to adjust how you explain something matters as much in a technical meeting as it does at an airport gate. It's a skill I didn't expect to carry over so directly between the two halves of my life, but it consistently does.</p>
         <p>I'm still working out exactly where I want to land, and I'd rather stay open to that than pretend otherwise. What I do know is that I want to be close to the people my work affects, and to keep learning from every opportunity I get. I'm looking for a graduate engineering role where I can apply technical problem-solving, clear cross-disciplinary communication, and a proactive approach to new challenges.</p>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <div class="container">
 
     <!-- RESUME -->
     <section id="resume">
       <div class="card">
         <h2 class="section-title">Resume</h2>
 
-        <h3><svg class="section-icon" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 10.5L4.5 9.5 12 5.5l7.5 4-7.5 4zM5 13.18v3.64c0 1.5 3.13 3.18 7 3.18s7-1.68 7-3.18v-3.64l-7 3.82-7-3.82z"/></svg> Education</h3>
-        <p class="meta">Bachelor of Software Engineering (Honours) &mdash; UTS | Feb 2023 - Dec 2026 (Expected)</p>
-        <ul class="bullets">
-          <li>High Distinction in Business Requirements Modelling</li>
-          <li>Distinction in Programming 1 (84)</li>
-          <li>Distinction in Data Structures and Algorithms</li>
-          <li>High Distinction in System Security (96)</li>
-          <li>Distinction in Software Development Studio</li>
-        </ul>
-        <p class="meta">Higher School Certificate, ATAR 88.4</p>
-
-        <h3><svg class="section-icon" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3l4.1 4.1L7.1 7.5 3 3.4C1.9 5.8 2.3 8.8 4.3 10.8c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l1-1c.4-.4.4-1 0-1.4z"/></svg> Technical Skills</h3>
-        <span class="chip-group-label">Languages</span>
-        <div class="chip-row">
-          <span class="chip">Java</span><span class="chip">Kotlin</span><span class="chip">Python</span>
-          <span class="chip">C/C++</span><span class="chip">C#</span><span class="chip">SQL</span>
-        </div>
-        <span class="chip-group-label">Web &amp; Tools</span>
-        <div class="chip-row">
-          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
-          <span class="chip">Git/GitHub</span><span class="chip">Android Studio</span>
-        </div>
-        <span class="chip-group-label">Other</span>
-        <div class="chip-row">
-          <span class="chip">Wireshark</span><span class="chip">PuTTY</span><span class="chip">Netwag</span>
-          <span class="chip">Photoshop</span><span class="chip">Linux</span>
+        <div class="grid-2">
+          <div>
+            <h3 class="group-heading"><svg viewBox="0 0 24 24"><path d="M12 2 1 8l11 6 9-4.91V17h2V8L12 2zM5 13.18v4.09L12 21l7-3.73v-4.09l-7 3.82-7-3.82z"/></svg>Education</h3>
+            <p class="meta">Bachelor of Software Engineering (Honours) &mdash; UTS | Feb 2023 - Dec 2026 (Expected)</p>
+            <ul class="bullets">
+              <li>High Distinction in Business Requirements Modelling</li>
+              <li>Distinction in Programming 1 (84)</li>
+              <li>Distinction in Data Structures and Algorithms</li>
+              <li>High Distinction in System Security (96)</li>
+              <li>Distinction in Software Development Studio</li>
+            </ul>
+            <p class="meta">Higher School Certificate, ATAR 88.4</p>
+          </div>
+          <div>
+            <h3 class="group-heading"><svg viewBox="0 0 24 24"><path d="M21.71 20.29 13.41 12A6 6 0 0 0 6 4.14L9 7.14 7.14 9 4.14 6A6 6 0 0 0 12 13.41l8.29 8.3a1 1 0 0 0 1.42 0l0-0.01a1 1 0 0 0 0-1.41z"/></svg>Technical Skills</h3>
+            <span class="chip-group-label">Languages</span>
+            <div class="chip-row">
+              <span class="chip">Java</span><span class="chip">Kotlin</span><span class="chip">Python</span>
+              <span class="chip">C/C++</span><span class="chip">C#</span><span class="chip">SQL</span>
+            </div>
+            <span class="chip-group-label">Web &amp; Tools</span>
+            <div class="chip-row">
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+              <span class="chip">Git/GitHub</span><span class="chip">Android Studio</span>
+            </div>
+            <span class="chip-group-label">Other</span>
+            <div class="chip-row">
+              <span class="chip">Wireshark</span><span class="chip">PuTTY</span><span class="chip">Netwag</span>
+              <span class="chip">Photoshop</span><span class="chip">Linux</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="group-heading"><svg viewBox="0 0 24 24"><path d="M10 2a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v3h20V8a2 2 0 0 0-2-2h-4V4a2 2 0 0 0-2-2h-4zm0 2h4v2h-4V4zM2 13v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6H2z"/></svg> Professional Experience</div>
+      <h3 class="group-heading"><svg viewBox="0 0 24 24"><path d="M20 6h-3V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zM9 4h6v2H9zm11 15H4V8h16z"/></svg>Professional Experience</h3>
 
       <div class="card">
         <div class="job-header">
-          <h3 class="job-title" style="margin-top:0;">Software Engineer Tech Lead (Student Consultant)</h3>
+          <h3 class="job-title">Software Engineer Tech Lead (Student Consultant)</h3>
           <span class="job-date">May 2026 - Aug 2026</span>
         </div>
         <p class="job-company">Optik Consultancy, Client: Rockfield Technologies</p>
@@ -122,7 +127,7 @@
       <div class="card grid-2">
         <div>
           <div class="job-header">
-            <h3 class="job-title" style="margin-top:0;">Passenger Services Agent</h3>
+            <h3 class="job-title">Passenger Services Agent</h3>
             <span class="job-date">09/2024 - Current</span>
           </div>
           <p class="job-company">Tailored Workforce</p>
@@ -134,7 +139,11 @@
           </ul>
         </div>
         <div>
-          <h3 style="margin-top:0;">Relevant Skills</h3>
+          <div class="job-header">
+            <h3 class="job-title">Relevant Skills</h3>
+            <span class="job-date">&nbsp;</span>
+          </div>
+          <p class="job-company">&nbsp;</p>
           <ul class="bullets">
             <li><strong>Customer Service:</strong> Effectively addressing client needs and resolving issues promptly.</li>
             <li><strong>Bilingual Communication:</strong> Fluent in both Arabic and English.</li>
@@ -145,14 +154,11 @@
         </div>
       </div>
 
-      <div class="group-heading"><svg class="section-icon" viewBox="0 0 24 24"><path d="M10 4H2v16h20V6H12l-2-2z"/></svg> Projects</div>
+      <h3 class="group-heading"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg>Projects</h3>
       <div class="grid-2">
         <div class="card">
-          <div class="job-header">
-            <h3 class="job-title project-title-scamshark" style="margin-top:0;">Scam<span>Shark</span></h3>
-            <span class="job-date">02/2025 - 06/2025</span>
-          </div>
-          <p class="job-company" style="color: var(--scamshark-blue);">Anti-Scam SMS App &mdash; UTS</p>
+          <h3 class="project-title-scamshark">Scam<span>Shark</span> (Anti-Scam SMS App)</h3>
+          <p class="meta">University of Technology Sydney | 02/2025 - 06/2025</p>
           <ul class="bullets">
             <li>Designed and developed an Android application named ScamShark to warn users of scam SMS messages, focusing on user safety and digital literacy.</li>
             <li>Collaborated within a cross-functional team using SCRUM methodology, Jira for task management, and regular feedback loops with clients.</li>
@@ -160,11 +166,8 @@
           </ul>
         </div>
         <div class="card">
-          <div class="job-header">
-            <h3 class="job-title project-title-fixmate" style="margin-top:0;"><span class="fix">Fix</span><span class="mate">Mate</span></h3>
-            <span class="job-date">08/2025 - 11/2025</span>
-          </div>
-          <p class="job-company" style="color: var(--fixmate-orange);">Tradie Quoting Automation App &mdash; UTS</p>
+          <h3 class="project-title-fixmate"><span class="fix">Fix</span><span class="mate">Mate</span> &mdash; Tradie Quoting Automation App</h3>
+          <p class="meta">University of Technology Sydney | 08/2025 - 11/2025</p>
           <ul class="bullets">
             <li>Developed backend infrastructure for a tradie quoting application designed to streamline manual inspection workflows and automate pricing through supplier data integration.</li>
             <li>Built RESTful API endpoints using Node.js and Express.js to handle image uploads, linking each photo to a job record in a Supabase PostgreSQL database.</li>
@@ -177,30 +180,28 @@
 
     <!-- REFLECTION -->
     <section id="reflection">
-      <div class="card prose">
+      <div class="card">
         <h2 class="section-title">Reflection</h2>
         <p class="subtitle">Optik Consultancy Internship (Tech Lead, Student Consultant)</p>
 
-        <h3 style="margin-top:0;">What were your expectations before you joined?</h3>
+        <h3>What were your expectations before you joined?</h3>
         <p>Honestly, I expected it to be a drag. Friends who had done the last round described it as something to get through for the sake of having one on your record, and said the value came down to luck: whether you got a good client and a good group. I planned to complete it, do it well, and move on.</p>
 
         <h3>What was the reality?</h3>
-        <p>The opposite. It became one of the most valuable experiences of my degree. Our client's problem was that for every hour a site inspector spent inspecting, they spent roughly five hours afterwards writing up the report. We built a hands-free field-inspection app around that ratio, pairing Meta smart glasses with a custom Android app driven by a voice-controlled AI talk-back system, so an inspector could say "take a photo" and the app would trigger the glasses' camera over Bluetooth, then store the photo compressed but fully detailed, ready to annotate and caption on the spot.</p>
+        <p>The opposite. It became one of the most valuable experiences of my degree. We were building a hands-free field-inspection workflow, pairing Meta smart glasses with a custom Android app so inspectors could capture voice notes and photos on site, with no established way to do most of it, so we were genuinely solving problems rather than following a specification. I took on the tech lead role, and while I expected the build to fall mainly to the two of us from a software background, the team spanned five engineering disciplines, and everyone took ownership of their own part.</p>
 
         <div class="image-placeholder">
           <img src="assets/internship-photo-1.png" alt="Rockfield internship tradeshow display">
         </div>
 
-        <p>I took on the tech lead role, and while I expected the build to fall mainly to the two of us from a software background, the team spanned five engineering disciplines, and everyone took ownership of their own part. We built two ways for inspectors to report: a guided checklist mode where the AI asks structured questions back and forth, and a freeform mode where an on-device Qwen 1.5B model parses a single spoken description straight into the report fields. The feature clients cared about most was the loadsheet system, letting a contractor like a state government or mining company upload their own inspection template as a Word, CSV, or Excel file, and export a finished report in any of those formats plus ZIP or PDF, with the option to pick up and continue an inspection later.</p>
+        <p>Most of the time went on getting the glasses-to-app connection to behave reliably once we moved from indoor demos to outdoor field tests, designing for someone whose hands are occupied and who cannot look at a screen, and making sure voice-captured data reached the client's Fulcrum system accurately and without dropouts in the field. Assumptions that held indoors sometimes failed on site, which meant iterating on the integration more than once. I was fortunate with my client and group, but speaking to other teams, I do not think the value came down to luck. Every group came away with something.</p>
 
         <div class="image-placeholder">
           <img src="assets/internship-photo-2.jpg" alt="App screenshots and exported inspection report">
         </div>
 
-        <p>Most of the time went on getting the glasses-to-app connection to behave reliably once we moved from indoor demos to outdoor field tests, designing for someone whose hands are occupied and who cannot look at a screen, and keeping the voice pipeline accurate without dropouts in the field. Assumptions that held indoors sometimes failed on site, which meant iterating on the integration more than once. I was fortunate with my client and group, but speaking to other teams, I do not think the value came down to luck. Every group came away with something.</p>
-
         <h3>What lessons were the most important, and why?</h3>
-        <p>That a lot more is achievable than it first appears, provided the team is managed well, and the client and supervisors are genuinely engaged. We finished the original scope with six weeks remaining, and rather than easing off, we spent the rest of the internship working through stretch goals we had assumed were out of reach, like the loadsheet import/export system. Our client believed we could do it and kept encouraging us, so we delivered something that could meaningfully close the gap between inspection time and reporting time, and something we could properly showcase at the tradeshow. It was the clearest demonstration I have had that expectations set by the people around you shape what a team actually produces.</p>
+        <p>That a lot more is achievable than it first appears, provided the team is managed well, and the client and supervisors are genuinely engaged. We finished the original scope with six weeks remaining, and rather than easing off, we spent the rest of the internship working through stretch goals we had assumed were out of reach. Our client believed we could do it and kept encouraging us, so we delivered a workflow that noticeably cut the time inspectors spent manually typing up reports, and something we could properly showcase at the tradeshow. It was the clearest demonstration I have had that expectations set by the people around you shape what a team actually produces.</p>
 
         <h3>Value proposition to an employer</h3>
         <p>I can hold the whole picture of a system while working across a multidisciplinary team, and translate technical decisions for people who do not share my background. I demonstrated this by leading the technical side of a 12-week prototype, supporting teammates with problems outside their specialisms, and producing the technical handover the client received.</p>
@@ -213,18 +214,26 @@
 
     <!-- COVER LETTER -->
     <section id="cover-letter">
-      <div class="card prose">
+      <div class="card">
         <h2 class="section-title">Cover Letter</h2>
-        <p class="meta">0435405255 | ali.4sh.hasan@gmail.com | 25 August 2026 | Industrus Engineering</p>
+
+        <div class="letter-head">
+          <h3 class="letter-name">Ali Sabah Hasan</h3>
+          <p class="meta">0435405255 | ali.4sh.hasan@gmail.com</p>
+          <hr class="letter-divider">
+          <p class="letter-date">25 August 2026</p>
+          <p class="letter-recipient">Graduate Recruitment Team<br>Industrus Engineering</p>
+        </div>
+
         <p><em>Re: Application for Graduate Engineering Program - Software Engineering</em></p>
         <p>Dear Hiring Manager,</p>
         <p>I am writing to apply for a graduate engineering position in the Industrus Engineering Graduate Program. As a penultimate-year Software Engineering student at UTS, I have led a multidisciplinary team on a client-facing prototype, built full-stack applications from concept to delivery, and worked in fast-paced, people-facing environments. I believe this combination has prepared me to contribute across your rotating project roles and divisions. Below I address the selection criteria.</p>
 
-        <h3 style="margin-top:1.3rem;">A commitment to ethical conduct and accountability</h3>
-        <p>During my internship at Optik Consultancy, our team was building a hands-free field-inspection app for a client using Meta smart glasses and a custom Android app. Several assumptions that had held up in indoor testing failed once we tested outdoors. Rather than smoothing over these gaps in our reporting, I made sure the technical handover documentation to the client accurately reflected what worked, what didn't, and why. This meant flagging shortcomings that could have made our results look less polished. The client appreciated the honesty and used the documentation to plan the next phase of the project with realistic expectations, reinforcing to me that accurate reporting matters more than a good-looking result.</p>
+        <h3>A commitment to ethical conduct and accountability</h3>
+        <p>During my internship at Optik Consultancy, our team was building a hands-free field-inspection workflow for a client using Meta smart glasses and a custom Android app. Several assumptions that had held up in indoor testing failed once we tested outdoors. Rather than smoothing over these gaps in our reporting, I made sure the technical handover documentation to the client accurately reflected what worked, what didn't, and why. This meant flagging shortcomings that could have made our results look less polished. The client appreciated the honesty and used the documentation to plan the next phase of the project with realistic expectations, reinforcing to me that accurate reporting matters more than a good-looking result.</p>
 
         <h3>Ability to effectively communicate with engineers and stakeholders from different fields</h3>
-        <p>As tech lead on the same internship project, I worked with a team spanning five engineering disciplines, most of whom did not share a software background. I was responsible for translating technical decisions, such as trade-offs in how the app handled unreliable field conditions, into terms the wider team and client could act on. I ran regular check-ins to explain progress and surface dependencies between hardware, software, and testing work. As a result, the team stayed aligned despite the technical gap between disciplines, and we delivered an app that met the client's needs.</p>
+        <p>As tech lead on the same internship project, I worked with a team spanning five engineering disciplines, most of whom did not share a software background. I was responsible for translating technical decisions, such as trade-offs in how the app handled unreliable field conditions, into terms the wider team and client could act on. I ran regular check-ins to explain progress and surface dependencies between hardware, software, and testing work. As a result, the team stayed aligned despite the technical gap between disciplines, and we delivered a workflow that met the client's needs.</p>
 
         <h3>Creative, innovative and proactive environment</h3>
         <p>While developing FixMate, a mobile app for tradies, with a university team, I helped design a feature that used AI to scrape live pricing data from Bunnings Warehouse and automatically estimate the materials and cost for a job from a customer's photos. This removed the need for a tradie to visit a site just to provide a quote. I also proposed letting tradies manually adjust the generated quote when they already held some materials, since a fixed estimate would not reflect their actual costs. This feature became a core part of the app and directly addressed a real inefficiency in how tradies currently price jobs.</p>
@@ -236,7 +245,7 @@
         <p>In my role as a Passenger Services Agent, I regularly managed competing priorities in real time, assisting passengers with urgent needs while meeting strict compliance requirements under time pressure. Early on, I found it easy to get pulled between tasks without a clear order of priority. I developed a habit of quickly triaging which passenger or compliance issue needed immediate attention versus what could wait a few minutes, and checked in with supervisors when unsure. This let me maintain consistent service quality and full regulatory compliance, even during high-pressure periods such as flight delays.</p>
 
         <h3>Leadership and teamwork</h3>
-        <p>As tech lead during my internship, I was initially expecting the technical build to fall mainly to the two team members with a software background. Instead, our five-discipline team took ownership of the whole prototype, and I coordinated their efforts across hardware, software, and testing. When we finished the original project scope six weeks early, I led the team through additional stretch goals rather than letting momentum drop, resulting in an app strong enough for the client to showcase at a tradeshow. This experience showed me that leadership on a technical team is often about keeping people aligned and motivated, not just contributing code.</p>
+        <p>As tech lead during my internship, I was initially expecting the technical build to fall mainly to the two team members with a software background. Instead, our five-discipline team took ownership of the whole prototype, and I coordinated their efforts across hardware, software, and testing. When we finished the original project scope six weeks early, I led the team through additional stretch goals rather than letting momentum drop, resulting in a workflow strong enough for the client to showcase at a tradeshow. This experience showed me that leadership on a technical team is often about keeping people aligned and motivated, not just contributing code.</p>
 
         <p>I would welcome the opportunity to discuss how my experience fits the Graduate Program in an interview. Thank you for considering my application.</p>
         <p>Kind Regards,<br>Ali Sabah Hasan</p>
